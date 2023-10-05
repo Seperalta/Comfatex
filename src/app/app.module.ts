@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactoComponent } from './contacto/contacto.component';
-import { DescripcionFajasComponent } from './descripcion-fajas/descripcion-fajas.component';
-import { DescripcionInsumosComponent } from './descripcion-insumos/descripcion-insumos.component';
+import { LandingComponent } from './pages/landing/landing.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { FajasComponent } from './pages/fajas/fajas.component';
+import { InsumosComponent } from './pages/insumos/insumos.component';
+import { WhatsappBtnComponent } from './components/whatsapp-btn/whatsapp-btn.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactoComponent,
-    DescripcionFajasComponent,
-    DescripcionInsumosComponent
+    LandingComponent,
+    ContactComponent,
+    FajasComponent,
+    InsumosComponent,
+    WhatsappBtnComponent,
   ],
   imports: [
     BrowserModule,
