@@ -1,7 +1,7 @@
 .container {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 30px;
+    right: 30px;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -10,19 +10,7 @@
     cursor: pointer;
   }
   
-  .whatsapp-button {
-    background-color: #25d366;
-    color: #fff; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes curvos */
-    display: inline-block; /* Hace que el div se comporte como un bloque en línea */
-    transition: background-color 0.3s, color 0.3s; /* Agregamos transiciones para el color de fondo y el color del texto */
-  }
   
-  .whatsapp-button:hover {
-    background-color: #128c7e; /* Cambiamos el color de fondo al pasar el mouse */
-    color: #fff; /* Cambiamos el color del texto al pasar el mouse */
-  }
   .whatsapp-icon:hover {
     background-color: #128c7e; /* Cambiamos el color de fondo al pasar el mouse */
   }
