@@ -8,6 +8,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FajasComponent } from './pages/fajas/fajas.component';
 import { InsumosComponent } from './pages/insumos/insumos.component';
 import { WhatsappBtnComponent } from './components/whatsapp-btn/whatsapp-btn.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { WhatsappBtnComponent } from './components/whatsapp-btn/whatsapp-btn.com
     FajasComponent,
     InsumosComponent,
     WhatsappBtnComponent,
+    FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
