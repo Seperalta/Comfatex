@@ -7,7 +7,9 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
-    padding: 0px 50px 0px 50px
+    padding: 0px 50px 0px 50px;
+    position: fixed;
+    width: 100%;
 }
 .Inicio{
     display: flex;
@@ -68,12 +70,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        border-radius: 20px;
-        overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
 
 }
 
@@ -85,6 +87,7 @@
 
 .btnRedes {
     display: flex;
+    gap: 3px;
 }
 
 .btnRedes .social {
@@ -98,6 +101,7 @@
     justify-content: center;
     align-items: center;
     padding: 4px;
+    margin: 1px 0px -1px 1px;
 }
 
 .menu li:hover a .facebook-icon {
@@ -116,7 +120,10 @@
   }
 
 .btnRedes .social a {
+    display: flex;
     padding: 0px 1px 0px 0px  !important;
+    border-radius: 20px;
+    border: solid 1px #ffff;
     
 }
 

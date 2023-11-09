@@ -4,15 +4,21 @@
     right: 30px;
     display: flex;
     flex-direction: row;
+    padding: 0;
+    width: 45px;
+    height: 45px;
     align-content: center;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
-    cursor: pointer;
+    z-index: 999;
   }
   
   
   .whatsapp-icon:hover {
-    background-color: #128c7e; /* Cambiamos el color de fondo al pasar el mouse */
+    background-color: #148114; /* Cambiamos el color de fondo al pasar el mouse */
+    color: #148114; 
+    border-color: #148114; 
+    text-shadow: 0 0 9px #148114;
   }
   
   .whatsapp-icon img {
@@ -22,9 +28,11 @@
 
   }
   .whatsapp-icon{
-    background-color: #ffffff; 
+    background-color: rgb(1, 87, 1);
     width: 45px; 
     height: 45px; 
     border-radius: 40px;
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s; 
   }
   

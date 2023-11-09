@@ -1,0 +1,13 @@
+*{
+    background-image: url("/assets/img/patron.svg");
+  background-size: 100% auto; /* Mantiene las dimensiones originales, se ajustará el máximo posible dentro del contenedor sin perder la relación de aspecto */
+  background-position: center center; /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed;
+
+
+}
+p{
+    margin: 0;
+    color: rgba(240, 248, 255, 0);
+}
