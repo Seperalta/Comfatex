@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 
 .menu {
-    background: linear-gradient(to right, #E13BFE, #3708FC);
+    background:radial-gradient(circle at 50% 30%, #c71585, #be177e, #b41a77, #ac1b71, #a31d6b, #9a1f65, #92205f, #8a215a, #822255, #7a2350, #72244b, #6b2447);
     overflow: hidden;
     font-family: 'Philosopher', sans-serif;
     margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.Inicio{
+    display: flex;
 }
 
 .menu ul {
@@ -16,6 +20,20 @@
     border-radius: 20px;
     overflow: hidden;
 }
+
+.menu ul ul{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:0;
+  padding:0;
+  display:flex;
+}
+
+.menu ul ul li {
+  list-style: none;
+}
+
 
 .menu li {
     text-align: center;
@@ -36,31 +54,45 @@
 .menu li:hover a {
     color: #fff; /* Cambia el color del texto al hover */
     border-color: #fff; /* Muestra el borde en blanco en el hover */
-    text-shadow: 0 0 5px white;
+    text-shadow: 0 0 9px white;
 }
 
-.menu .logo {
+.logoInicio .logo {
     flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        border-radius: 20px;
+        overflow: hidden;
+
 }
 
-.menu img {
+.logoInicio img {
     max-width: 200px;
     height: auto;
     padding: 10px;
 }
 
-.menu .social {
+.btnRedes {
+    display: flex;
+}
+
+.btnRedes .social {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.menu .social a {
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+.btnRedes .social a {
+    padding: 0px 1px 0px 0px  !important;
+    
+}
+
+
+.social img{
+        width:24px;
 }
