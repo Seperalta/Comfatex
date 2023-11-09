@@ -7,6 +7,7 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
+    padding: 0px 50px 0px 50px
 }
 .Inicio{
     display: flex;
@@ -46,14 +47,19 @@
     text-align: center;
     padding: 20px;
     text-decoration: none;
-    transition: color 0.3s, text-shadow 0.3s; /* Cambiamos el color y el color del borde en el hover */
+    transition: color 0.3s, text-shadow 0.3s; 
     position: relative;
     box-sizing: border-box;
 }
 
 .menu li:hover a {
-    color: #fff; /* Cambia el color del texto al hover */
-    border-color: #fff; /* Muestra el borde en blanco en el hover */
+    color: #fff; 
+    border-color: #fff; 
+    text-shadow: 0 0 9px white;
+}
+.menu a:hover {
+    color: #fff;
+    border-color: #fff;
     text-shadow: 0 0 9px white;
 }
 
@@ -86,6 +92,28 @@
     justify-content: center;
     align-items: center;
 }
+
+.btnRedes .social i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+.menu li:hover a .facebook-icon {
+    color: white; 
+  }
+  
+  .menu li:hover a  .instagram-icon {
+    color: white;
+  }
+  
+  .menu li:hover a  .whatsapp-icon {
+    color: white;
+  }
+  .menu li:hover a  .whatsapp-icon {
+    color: white;
+  }
 
 .btnRedes .social a {
     padding: 0px 1px 0px 0px  !important;
