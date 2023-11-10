@@ -1,11 +1,9 @@
 *{
-    background-image: url("/assets/img/patron.svg");
+    background-image: linear-gradient(to right, #b7b7b7, #c3c4c5, #cdd1d4, #d7dfe1, #e2edec, #e2edec, #e2edec, #e2edec, #d7dfe1, #cdd1d4, #c3c4c5, #b7b7b7);
   background-size: 100% auto; /* Mantiene las dimensiones originales, se ajustará el máximo posible dentro del contenedor sin perder la relación de aspecto */
   background-position: center center; /* Centra la imagen en el contenedor */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-attachment: fixed;
-
-
 }
 p{
     margin: 0;

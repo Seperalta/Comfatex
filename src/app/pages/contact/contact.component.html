@@ -1,5 +1,37 @@
 <app-header></app-header>
+<div class="hoja">
+    <div class="Formulario">
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+            <div class="cajas">
+                <label for="nombres" class="form-label">Nombres</label>
+                <input type="text" id="nombres" class="form-control" formControlName="nombres" required>
+            </div>
+            <div class="cajas">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" id="apellidos" class="form-control" formControlName="apellidos" required>
+            </div>
+            <div class="cajas">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" id="email" class="form-control" formControlName="email" required>
+            </div>
+            <div class="cajas">
+                <label for="telefono" class="form-label">Número Telefónico</label>
+                <input type="tel" id="telefono" class="form-control" formControlName="telefono" required>
+            </div>
+            <div class="cajas">
+                <label for="pais" class="form-label">País</label>
+                <input type="text" id="pais" class="form-control" formControlName="pais" required>
+            </div>
+            <div class="cajas">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea id="mensaje" class="form-control" formControlName="mensaje" maxlength="1000"
+                    required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button (click)="btnBorrar()" class="btn btn-primary">Borrar</button>
+        </form>
+    </div>
+</div>
 
 <app-whatsapp-btn></app-whatsapp-btn>
-
 <app-footer></app-footer>

@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+.hoja {
+    background-image: linear-gradient(to right, #b7b7b7, #c3c4c5, #cdd1d4, #d7dfe1, #e2edec, #e2edec, #e2edec, #e2edec, #d7dfe1, #cdd1d4, #c3c4c5, #b7b7b7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 25px 0px 25px 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .cajas{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    align-items: stretch;
+
+  }
+
+  .form-label {
+    margin-right: 5rem; /* Espacio entre la etiqueta y el campo de entrada */
+    white-space: nowrap; /* Evita que la etiqueta se divida en varias líneas */
+    flex-shrink: 0; /* Previene que la etiqueta se encoja si hay poco espacio */
+    color: #c71585;
+    font-family: 'Nunito', sans-serif;
+    z-index: 99;
+  }
+
+  .form-control {
+    flex-grow: 1; /* Permite que el campo de entrada crezca para llenar el espacio */
+    display: block; /* Hace que el input ocupe la anchura disponible */
+    width: 100%; /* Anula cualquier ancho por defecto y permite que el input se expanda */
+    height: 33px;
+    border-radius: 20px;
+    background-color: #f4fff8;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+    border: 1px solid #c71585
+  }
+  
+
+  textarea.form-control {
+    resize: none; /* Desactiva la capacidad de redimensionar el textarea */
+    height: 150px; /* Altura fija para formar un rectángulo */
+  }
+
+  .datos{
+    width: 50%; /* o la anchura que desees */
+  height: 70%; /* Asegúrate de que el alto sea mayor que el ancho */
+  background-color: #333; /* o cualquier color de fondo */
+  }
+  
+  
+  /* Botón de envío con estilo de Bootstrap */
+  button[type="submit"] {
+    margin: 0px 25px 0px 17px;
+    color: #fff;
+    background: radial-gradient(circle at 50% 30%, #c71585, #be177e, #b41a77, #ac1b71, #a31d6b, #9a1f65, #92205f, #8a215a, #822255, #7a2350, #72244b, #6b2447);
+    border-color: #ffff;
+    padding: .375rem .75rem;
+    border-radius: 20px;
+    width: 7.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .hoja {
+      padding: 0 5px;
+    }
+  
+    label {
+      font-size: 1rem; /* Tamaño más grande en dispositivos pequeños para mejor legibilidad */
+    }
+  }
+  
