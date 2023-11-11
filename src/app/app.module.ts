@@ -12,7 +12,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -33,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         AppRoutingModule,
         NgbModule,
         ReactiveFormsModule,
+        FormsModule,
         
     ]
 })

@@ -46,6 +46,8 @@
     flex: 1;
 }
 
+.datos ul 
+
 .ovalo {
     background: radial-gradient(circle at 50% 30%, #c71585, #be177e, #b41a77, #ac1b71, #a31d6b, #9a1f65, #92205f, #8a215a, #822255, #7a2350, #72244b, #6b2447);
     width: 35%; /* Ancho del óvalo */

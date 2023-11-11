@@ -27,11 +27,15 @@
                 <textarea id="mensaje" class="form-control" formControlName="mensaje" maxlength="1000"
                     required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="customSwitch">Acepto proporcionar mis datos personales y entiendo que serán utilizados <br> exclusivamente con el propósito de responder a mi consulta.</label>
+                    <input class="form-check-input" id="customSwitch" type="checkbox" [(ngModel)]="checkboxValue" [ngModelOptions]="{standalone: true}">
+                </div>
+                <br>
+            <button type="submit" [disabled]="!checkboxValue" class="btn btn-primary">Enviar</button>
             <button (click)="btnBorrar()" class="btn btn-primary">Borrar</button>
         </form>
     </div>
 </div>
-
 <app-whatsapp-btn></app-whatsapp-btn>
 <app-footer></app-footer>

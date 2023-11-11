@@ -44,6 +44,10 @@
     z-index: 99;
   }
 
+  label{
+    font-family: 'Nunito', sans-serif;
+  }
+
   .form-control {
     flex-grow: 1; /* Permite que el campo de entrada crezca para llenar el espacio */
     display: block; /* Hace que el input ocupe la anchura disponible */
@@ -55,6 +59,22 @@
     line-height: 1.5;
     border: 1px solid #c71585
   }
+
+  .form-check-label{
+    font-size: 10px;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .form-check-input:checked {
+    background-color: #de5d83;
+    border-color: #de5d83;
+}
+
+.form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
   
 
   textarea.form-control {
@@ -70,22 +90,36 @@
   
   
   /* Botón de envío con estilo de Bootstrap */
-  button[type="submit"] {
-    margin: 0px 25px 0px 17px;
-    color: #fff;
-    background: radial-gradient(circle at 50% 30%, #c71585, #be177e, #b41a77, #ac1b71, #a31d6b, #9a1f65, #92205f, #8a215a, #822255, #7a2350, #72244b, #6b2447);
+  button[type="submit"],
+  button {
+    margin: 0px 48px 0px 17px;
+    color: hsl(0, 0%, 100%);
+    background-color: #66023c;
     border-color: #ffff;
     padding: .375rem .75rem;
     border-radius: 20px;
     width: 7.5rem;
     font-size: 1rem;
     line-height: 1.5;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave inicial */
   }
   
   button[type="submit"]:hover {
-    background-color: #ffffff;
-    border-color: #ffffff;
+    color: white;
+    background-color: #00000000;
+    background:radial-gradient(circle at 50% 30%, #c71585, #be177e, #b41a77, #ac1b71, #a31d6b, #9a1f65, #92205f, #8a215a, #822255, #7a2350, #72244b, #6b2447);
+    transform: scale(1.05);
+    border-color: #ffffff !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  }
+
+  button:hover {
+    color: white;
+    background-color: #de5d83;
+    transform: scale(1.05);
+    border-color: #ffffff !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
   }
   
   /* Responsive design */
