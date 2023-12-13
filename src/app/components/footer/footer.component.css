@@ -46,7 +46,7 @@
     flex: 1;
 }
 
-.datos ul 
+
 
 .ovalo {
     background: radial-gradient(circle at 50% 30%, #c71585, #be177e, #b41a77, #ac1b71, #a31d6b, #9a1f65, #92205f, #8a215a, #822255, #7a2350, #72244b, #6b2447);
@@ -77,7 +77,15 @@
     top: -110%;
     left: 12%;
     transition: color 0.3s, text-shadow 0.3s; 
+
 }
+
+
+.btnRedes a:hover{
+    background: transparent;
+    box-shadow: 0 0 5px 5px #fff;
+}
+
 .btnRedes a {
     padding: 5px 10px 5px 5px !important;
         border-radius: 50px;
@@ -87,11 +95,8 @@
         transition: color 0.3s, text-shadow 0.3s; 
 }
 
-.btnRedes a:hover {
-    color: #fff; 
-    border-color: #fff; 
-    text-shadow: 0 0 15px white;
-}
+
+
 
 
 .contactenos{

@@ -1,0 +1,73 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cards-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    margin: 0 auto;
+  }
+  
+  .card {
+    text-align: center;
+    position: relative;
+    flex: 0 0 20%; /* Ajusta según tus necesidades */
+    transition: flex 0.5s ease;
+    margin: 10px; /* Añadido margen para separar las tarjetas */
+    padding: 10px; /* Añadido relleno para espacio interno en la tarjeta */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añadido sombreado para resaltar las tarjetas */
+    border-radius: 8px; /* Añadido para bordes redondeados */
+  }
+  
+  .card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajusta según tus necesidades */
+    border-radius: 8px; /* Añadido para bordes redondeados */
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .circles {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .circles div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .navigation button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-color: transparent; /* Color para resaltar la tarjeta y el círculo activos */
+  }
+  
+  /* Estilo especial para la tarjeta del centro */
+  .card.active {
+    flex: 0 0 40%; /* Ajusta según tus necesidades */
+  }
+  

@@ -1,0 +1,20 @@
+<div class="carousel">
+    <div class="cards-container">
+      <div class="card" *ngFor="let card of visibleCards; let i = index" [ngClass]="{ 'active': i === centerIndex }">
+        <img [src]="card.imageUrl" alt="Card {{ card.id }}">
+        <div class="card-content">
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
+          <p class="card-id">ID: {{ card.id }}</p>
+        </div>
+        <div class="circles">
+          <div *ngFor="let circle of card.circles; let j = index" [ngStyle]="{ 'background-color': circle.color }"></div>
+        </div>
+      </div>
+    </div>
+    <div class="navigation">
+      <button (click)="prevCard()">‹</button>
+      <button (click)="nextCard()">›</button>
+    </div>
+  </div>
+  

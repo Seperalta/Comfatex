@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
         FooterComponent,
         HeaderComponent,
         CardsComponent,
+        CarruselComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
