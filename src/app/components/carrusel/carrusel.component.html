@@ -1,20 +1,18 @@
-<div class="carousel">
-    <div class="cards-container">
-      <div class="card" *ngFor="let card of visibleCards; let i = index" [ngClass]="{ 'active': i === centerIndex }">
-        <img [src]="card.imageUrl" alt="Card {{ card.id }}">
-        <div class="card-content">
-          <h3>{{ card.title }}</h3>
-          <p>{{ card.description }}</p>
-          <p class="card-id">ID: {{ card.id }}</p>
-        </div>
-        <div class="circles">
-          <div *ngFor="let circle of card.circles; let j = index" [ngStyle]="{ 'background-color': circle.color }"></div>
-        </div>
+<p-carousel [value]="products" [numVisible]="5" [circular]="true" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" [autoplayInterval]="4000">
+  <ng-template let-product pTemplate="item">
+      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+          <div class="mb-3">
+              <img [src]="product.imagenURL" [alt]="product.name" class="w-6 shadow-2" />
+          </div>
+          <div>
+              <h4 class="mb-1">{{ product.name }}</h4>
+              <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+              <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+              <div class="mt-5 flex align-items-center justify-content-center gap-2">
+              <p-button icon="pi pi-search" [rounded]="true" />
+              <p-button icon="pi pi-star-fill" [rounded]="true" severity="secondary" />
+          </div>
+          </div>
       </div>
-    </div>
-    <div class="navigation">
-      <button (click)="prevCard()">‹</button>
-      <button (click)="nextCard()">›</button>
-    </div>
-  </div>
-  
+  </ng-template>
+</p-carousel>

@@ -1,6 +1,19 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CarouselModule } from 'primeng/carousel';
 
+interface Product {
+  name: string;
+  imagenURL: string;
+  price: number;
+  inventoryStatus: string;
+}
+
+interface CarouselResponsiveOptions {
+  breakpoint: string;
+  numVisible: number;
+  numScroll: number;
+}
 
 
 @Component({
@@ -9,76 +22,33 @@ import { CommonModule } from '@angular/common';
   styleUrl: './carrusel.component.css'
 })
 
-export class CarruselComponent implements OnInit {
-  
-  cards: any[] = [
-    {
-      id: 1,
-      title: 'Card 1',
-      description: 'Description for Card 1',
-      imageUrl: 'assets/img/poke1.png',
-      circles: [
-        { color: 'red' },
-        { color: 'red' },
-        { color: 'red' }
-      ]
-    },
-    {
-      id: 2,
-      title: 'Card 2',
-      description: 'Description for Card 2',
-      imageUrl: 'assets/img/poke2.png',
-      circles: [
-        { color: 'orange' },
-        { color: 'purple' },
-        { color: 'pink' }
-      ]
-    },
-    {
-      id: 3,
-      title: 'Card 3',
-      description: 'Description for Card 3',
-      imageUrl: 'assets/img/poke3.png',
-      circles: [
-        { color: 'yellow' },
-        { color: 'brown' },
-        { color: 'cyan' }
-      ]
-    },
-    {
-      id: 4,
-      title: 'Vamos los millos',
-      description: 'Nos robaron...',
-      imageUrl: 'assets/img/poke4.png',
-      circles: [
-        { color: 'blue' },
-        { color: 'white' },
-        { color: 'blue' }
-      ]
-    },
-    // Agrega más tarjetas según sea necesario
+export class CarruselComponent {
+
+  products: Product[] = [
+    { name: 'Producto 1',  imagenURL: 'assets/img/poke1.png', price: 1000, inventoryStatus: 'In Stock' },
+    { name: 'Producto 2', imagenURL: 'Comfatex\src\assets\img\bannerRecurso.png', price: 29.99, inventoryStatus: 'Out of Stock' },
+ 
+    // Agrega más productos según sea necesario
   ];
 
-  centerIndex = 0;
-  visibleCards: any[] = [];
+  responsiveOptions: CarouselResponsiveOptions[] = [
+    { breakpoint: '1024px', numVisible: 5, numScroll: 1 },
+    { breakpoint: '768px', numVisible: 2, numScroll: 1 },
+    { breakpoint: '560px', numVisible: 1, numScroll: 1 }
+  ];
 
-  ngOnInit(): void {
-    this.updateVisibleCards();
+  getSeverity(inventoryStatus: string): string {
+    switch (inventoryStatus) {
+      case 'In Stock':
+        return 'success';
+      case 'Out of Stock':
+        return 'danger';
+      case 'Low Stock':
+        return 'warning';
+      default:
+        return 'info';
+    }
   }
 
-  prevCard(): void {
-    this.centerIndex = (this.centerIndex - 1 + this.cards.length) % this.cards.length;
-    this.updateVisibleCards();
-  }
-
-  nextCard(): void {
-    this.centerIndex = (this.centerIndex + 1) % this.cards.length;
-    this.updateVisibleCards();
-  }
-
-  updateVisibleCards(): void {
-    const numVisible = 3; // Número de tarjetas visibles a la vez
-    const start = (this.centerIndex - Math.floor(numVisible / 2) + this.cards.length) % this.cards.length;
-    this.visibleCards = Array.from({ length: numVisible }, (_, i) => this.cards[(start + i) % this.cards.length]);
-  }
+  
 }
